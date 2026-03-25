@@ -4,7 +4,7 @@ import { apiConfig } from '../services/api-config.js';
 export async function scheduleFetchByDay({ date }) {
   //requesting to fetch schedule data from the server
   try{
-    const response = await fetch(`${apiConfig.baseUrl}/schedules`);
+    const response = await fetch(`${apiConfig.baseUrl}/schedules?_sort=when`);
     const data = await response.json();
 
     //filtering by the selected date
